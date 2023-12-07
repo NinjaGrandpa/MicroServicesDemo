@@ -1,7 +1,9 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Driver;
+using Questions.DataAccess.Interfaces;
+using Questions.DataAccess.Models;
 
-namespace Questions.DataAccess;
+namespace Questions.DataAccess.Repositories;
 
 public class QuestionRepository : IQuestionRepository
 {

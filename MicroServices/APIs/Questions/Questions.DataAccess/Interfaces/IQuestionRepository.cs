@@ -1,7 +1,8 @@
 ﻿using Domain.Common.Interfaces.DataAccess;
 using MongoDB.Bson;
+using Questions.DataAccess.Models;
 
-namespace Questions.DataAccess;
+namespace Questions.DataAccess.Interfaces;
 
 public interface IQuestionRepository : IGenericRepository<Question, ObjectId>
 {

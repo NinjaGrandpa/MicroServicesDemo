@@ -2,7 +2,7 @@
 using Domain.Common.Interfaces.DataAccess;
 using MongoDB.Bson;
 
-namespace Questions.DataAccess;
+namespace Questions.DataAccess.Models;
 
 public class Question : IEntity<ObjectId>
 {
