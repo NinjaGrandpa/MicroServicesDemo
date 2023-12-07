@@ -12,7 +12,7 @@ public class QuestionRepository : IQuestionRepository
     public QuestionRepository()
     {
         var hostname = "localhost";
-        var databaseName = "QuestionDb";
+        var databaseName = "QuestionsDb";
         var connectionString = $"mongodb://{hostname}:27017";
 
         var client = new MongoClient(connectionString);
