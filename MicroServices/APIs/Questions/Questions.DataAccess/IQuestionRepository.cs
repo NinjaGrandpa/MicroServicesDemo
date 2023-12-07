@@ -1,6 +1,13 @@
-﻿namespace Questions.DataAccess;
+﻿using Domain.Common.Interfaces.DataAccess;
+using MongoDB.Bson;
 
-public interface IQuestionRepository
+namespace Questions.DataAccess;
+
+public interface IQuestionRepository : IGenericRepository<Question, ObjectId>
 {
-
+    Task<IEnumerable<Question>> GetForCategoryAsync(
+        string category, 
+        int count, 
+        CancellationToken cancellationToken
+        );
 }
