@@ -8,8 +8,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Register Services
 builder.Services.AddEndpointsApiExplorer(); // Maps the endpoint classes
-builder.Services.AddScoped<IQuestionRepository, QuestionRepository>(); // Uses Strategy Pattern for Dependency Injection
 builder.Services.AddFastEndpoints();
+builder.Services.AddScoped<IQuestionRepository, QuestionRepository>(); // Uses Strategy Pattern for Dependency Injection
 
 var app = builder.Build();
 
