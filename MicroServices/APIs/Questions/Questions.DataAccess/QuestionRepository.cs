@@ -28,4 +28,9 @@ public class QuestionRepository : IQuestionRepository
     {
         throw new NotImplementedException();
     }
+
+    public async Task<IEnumerable<Question>> GetForCategoryAsync(string category, int count, CancellationToken cancellationToken)
+    {
+        throw new NotImplementedException();
+    }
 }
