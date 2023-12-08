@@ -1,0 +1,8 @@
+# For more info on HTTP files go to https://aka.ms/vs/httpfile
+@Questions.API_HostAddress = http://localhost:5075/api/question/get-all
+
+###
+
+GET {{Questions.API_HostAddress}}
+
+###

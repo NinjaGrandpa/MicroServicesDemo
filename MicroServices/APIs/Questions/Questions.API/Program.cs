@@ -1,6 +1,5 @@
 using FastEndpoints;
-using Questions.DataAccess.Interfaces;
-using Questions.DataAccess.Repositories;
+using Questions.DataAccess;
 
 // Uses Builder Pattern
 

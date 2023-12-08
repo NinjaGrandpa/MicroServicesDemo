@@ -5,7 +5,7 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{F3D0636C-03C4-4E2F-8397-6A1D0CD51181}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.Common", "Domain\Domain.Common\Domain.Common.csproj", "{BDCBE34E-4EB6-4552-BC7D-42299BA3423A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain.Common", "Domain\Domain.Common\Domain.Common.csproj", "{BDCBE34E-4EB6-4552-BC7D-42299BA3423A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MicroServices", "MicroServices", "{9DBF27FD-E746-4F62-B4E2-890FC9F3FB72}"
 EndProject
@@ -13,29 +13,26 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "APIs", "APIs", "{B1BFD9CA-3
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Questions", "Questions", "{AA04256D-8B0B-4356-AD0F-EAC3793CC0CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Questions.API", "MicroServices\APIs\Questions\Questions.API\Questions.API.csproj", "{8AD477E2-98B0-43CD-AAC3-3199BB674DF3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Questions.API", "MicroServices\APIs\Questions\Questions.API\Questions.API.csproj", "{8AD477E2-98B0-43CD-AAC3-3199BB674DF3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Questions.DataAccess", "MicroServices\APIs\Questions\Questions.DataAccess\Questions.DataAccess.csproj", "{A5FAB68E-2CDC-4502-BAD0-C7B8E2A11360}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Questions.DataAccess", "MicroServices\APIs\Questions\Questions.DataAccess\Questions.DataAccess.csproj", "{A5FAB68E-2CDC-4502-BAD0-C7B8E2A11360}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Quiz", "Quiz", "{7310F715-E45B-486D-8D7B-AECB5619F4AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quiz.API", "MicroServices\APIs\Quiz\Quiz.API\Quiz.API.csproj", "{576C5EA6-9E1A-4D88-82A1-8F5006031C5B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Quiz.API", "MicroServices\APIs\Quiz\Quiz.API\Quiz.API.csproj", "{576C5EA6-9E1A-4D88-82A1-8F5006031C5B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quiz.DataAccess", "MicroServices\APIs\Quiz\Quiz.DataAccess\Quiz.DataAccess.csproj", "{1F8A96A2-BAE9-49F4-9E80-A501E9C14427}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Quiz.DataAccess", "MicroServices\APIs\Quiz\Quiz.DataAccess\Quiz.DataAccess.csproj", "{1F8A96A2-BAE9-49F4-9E80-A501E9C14427}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HighScore", "HighScore", "{201C21D0-1F54-403C-AD56-A3A3416DC522}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HighScore.API", "MicroServices\APIs\HighScore\HighScore.API\HighScore.API.csproj", "{4C9A7A1A-0CFE-4CC6-9441-54D7223FC416}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HighScore.API", "MicroServices\APIs\HighScore\HighScore.API\HighScore.API.csproj", "{4C9A7A1A-0CFE-4CC6-9441-54D7223FC416}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HighScore.DataAccess", "MicroServices\APIs\HighScore\HighScore.DataAccess\HighScore.DataAccess.csproj", "{3DD6D21B-CDF9-4CBE-95CD-3EA9E9BDF72C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HighScore.DataAccess", "MicroServices\APIs\HighScore\HighScore.DataAccess\HighScore.DataAccess.csproj", "{3DD6D21B-CDF9-4CBE-95CD-3EA9E9BDF72C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{BDCBE34E-4EB6-4552-BC7D-42299BA3423A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -66,6 +63,9 @@ Global
 		{3DD6D21B-CDF9-4CBE-95CD-3EA9E9BDF72C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3DD6D21B-CDF9-4CBE-95CD-3EA9E9BDF72C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3DD6D21B-CDF9-4CBE-95CD-3EA9E9BDF72C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{BDCBE34E-4EB6-4552-BC7D-42299BA3423A} = {F3D0636C-03C4-4E2F-8397-6A1D0CD51181}

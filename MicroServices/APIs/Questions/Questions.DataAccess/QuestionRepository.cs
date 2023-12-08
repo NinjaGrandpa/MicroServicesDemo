@@ -1,9 +1,8 @@
-﻿using MongoDB.Bson;
+﻿using Domain.Common.Enums;
+using MongoDB.Bson;
 using MongoDB.Driver;
-using Questions.DataAccess.Interfaces;
-using Questions.DataAccess.Models;
 
-namespace Questions.DataAccess.Repositories;
+namespace Questions.DataAccess;
 
 public class QuestionRepository : IQuestionRepository
 {
@@ -60,5 +59,40 @@ public class QuestionRepository : IQuestionRepository
         var skip = rnd.Next(questionsWithCategory.Count - count);
 
         return questionsWithCategory.Skip(skip).Take(count);
+    }
+
+    public async Task<IEnumerable<Question>> GetQuestionsForDifficultyAsync(Difficulty difficulty, int count, CancellationToken cancellationToken)
+    {
+        var rnd = new Random();
+        var filter = Builders<Question>.Filter.Eq("Difficulty", difficulty.ToString());
+
+        var questions = await _collection.Find(filter).ToListAsync(cancellationToken);
+        var skip = rnd.Next(questions.Count - count);
+
+        return questions.Skip(skip).Take(count);
+    }
+
+    public async Task<IEnumerable<Question>> GetQuestionsForQuizAsync(IEnumerable<string> ids, CancellationToken cancellationToken)
+    {
+        var filter = Builders<Question>.Filter.In("_id", ids.Select(ObjectId.Parse));
+
+        return await _collection.Find(filter).ToListAsync(cancellationToken);
+    }
+
+    public async Task AddMultipleAsync(IEnumerable<Question> questions, CancellationToken cancellationToken)
+    {
+        var bulkOps = new List<WriteModel<Question>>();
+
+        foreach (var question in questions)
+        {
+            var filter = Builders<Question>.Filter.Eq(doc => doc.QuestionText, question.QuestionText);
+
+            var update = Builders<Question>.Update.SetOnInsert(doc => doc, question);
+            var upsertOne = new UpdateOneModel<Question>(filter, update) { IsUpsert = true };
+
+            bulkOps.Add(upsertOne);
+        }
+
+        await _collection.BulkWriteAsync(bulkOps, cancellationToken: cancellationToken);
     }
 }
