@@ -9,6 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer(); // Maps the endpoint classes
 builder.Services.AddFastEndpoints();
 builder.Services.AddScoped<IQuestionRepository, QuestionRepository>(); // Uses Strategy Pattern for Dependency Injection
+builder.Services.AddHttpClient("openTriviaDb", c => c.BaseAddress = new Uri("https://opentdb.com/"));
 
 var app = builder.Build();
 
